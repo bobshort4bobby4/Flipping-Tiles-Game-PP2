@@ -51,6 +51,8 @@ header div {
     font-size:1rem;
 }
 
+
+/*==============styles for main play area=======*/
 #box-container {
     width:93%;
     justify-content: center;    
@@ -85,6 +87,11 @@ header div {
 
 .turn {
     transform:rotateY(180deg);
+}
+
+.resize-cards {
+    width: calc(26% - 10px) !important;
+  
 }
 
 /*==========================================styles for start/option buttons=======*/
@@ -197,6 +204,14 @@ header div {
       
 }
 
+@media screen and (min-width:375px) {
+    .resize-cards {
+        width:calc(26% - 10px) !important;
+    }
+ 
+}
+    
+
 @media screen and (min-width:425px) {
     #box-container {
         width:98%;
@@ -209,6 +224,12 @@ header div {
     #instruction-page {
         font-size:1.1rem;
     }
+
+    .resize-cards {
+        width:calc(26% - 10px) !important;
+    }
+}
+
 
 }  
 
@@ -227,12 +248,17 @@ header div {
         font-size:1.2rem;
     }
 
+    .resize-cards {
+        width:calc(16% - 10px) !important;
+       
+    }
+
 }
 
 @media screen and (min-width:1024px) {
     #box-container {
         width:50%;
-        margin:1% 25%;
+        margin:2% 25%;
     }
 
     .card {
@@ -255,12 +281,25 @@ header div {
     #inst-btn {
         width:75%;
     }
+
+    .resize-cards {
+        width:calc(16% - 10px) !important;
+       
+    }
     
 }
 
 @media screen and (min-width:1440px) {
     #inst-btn {
         width:65%;
+    }
+
+    .resize-cards {
+        width: calc(15% - 10px) !important; 
+    }
+
+    #box-container {
+        margin:3% 25%;
     }
 
 }
@@ -284,6 +323,11 @@ header div {
         margin: 20px auto;
     }
 
+    .resize-cards {
+      
+        width: calc(15% - 10px) !important;
+    }
+
 }
 
 @media screen and (min-width:1900px) {
@@ -291,6 +335,12 @@ header div {
         width:calc(21% - 10px);
         font-size:40px;
     }
+
+    .resize-cards {
+        font-size:40px;
+        width: calc(15% - 10px) !important;
+    }
+
 
 }
 
