@@ -1,3 +1,11 @@
+# **Flippin' Hack**
+
+
+Project is deployed [here](https://bobshort4bobby4.github.io/Flipping-Tiles-Game-PP2/)  
+  
+Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)  
+
+
 # Introduction
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
 
