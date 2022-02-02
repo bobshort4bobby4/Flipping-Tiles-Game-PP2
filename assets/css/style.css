@@ -181,3 +181,136 @@ header div {
     padding:5px;
     margin: 10px auto;
 }
+
+
+/*=========================================================MEDIA QUERIES===================================*/
+/*=========================================================================================================*/
+/*=========================================================================================================*/
+@media screen and (min-width:280px) {
+    #scores-region {
+        font-size:0.9rem;
+    }
+
+    #inst-btn {
+        font-size:1.1rem;
+    }
+      
+}
+
+@media screen and (min-width:425px) {
+    #box-container {
+        width:98%;
+    } 
+
+    #scores-region {
+        font-size: 1.3rem;;
+    }
+
+    #instruction-page {
+        font-size:1.1rem;
+    }
+
+}  
+
+@media screen and (min-width:768px) {
+
+
+    #box-container {
+        width: 97%;
+    }
+
+    .card {
+        width:21%;
+    }
+
+    #instruction-page {
+        font-size:1.2rem;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    #box-container {
+        width:50%;
+        margin:1% 25%;
+    }
+
+    .card {
+        font-size:32px;
+        width:21%;
+    }
+
+    #scores-region {
+        font-size: 2rem;
+    }
+
+    #instruction-page {
+         font-size:1.3rem;
+     }
+
+    #instruct-p {
+        width:75%;
+    }
+
+    #inst-btn {
+        width:75%;
+    }
+    
+}
+
+@media screen and (min-width:1440px) {
+    #inst-btn {
+        width:65%;
+    }
+
+}
+
+@media screen and (min-width:1700px) {
+    #box-container {
+        width:50%;
+        margin:0 25%;
+        margin-top:140px;
+    }
+
+   .card {
+        width: 15%;
+    }
+
+    #instruction-page p {
+        margin: 13px auto;
+    }
+    
+    #instruction-page h3 {
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (min-width:1900px) {
+    .card {
+        width:calc(21% - 10px);
+        font-size:40px;
+    }
+
+}
+
+@media screen and (min-width:2100px) {
+    #scores-region {
+        margin-top:25px;
+        font-size:2.5rem;
+    }
+
+    #srt-ins-btn {
+        margin-top:50px;
+        font-size:2.5rem;
+    }
+
+    #srt-ins-btn button {
+        font-size:2rem;
+    }
+
+    #instructions-div {
+        margin-top:40px;
+    }
+
+}
