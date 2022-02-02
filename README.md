@@ -22,14 +22,14 @@ can improve mental function.
   ### User Stories
   
   ##### First Time Visitor Goals
-  As a first time visitor I want:<br>
-  - the rules and final aim of the game to be obvious.<br>
-  - to be entertained and engaged with the game from the initial load.<br>
-  - the game to function correctly and gameplay to be intuitive.
-  - to be able to play the game on various different devices.
+  As a first time visitor I want:  
+  - the rules and final aim of the game to be obvious.  
+  - to be entertained and engaged with the game from the initial load.  
+  - the game to function correctly and gameplay to be intuitive.  
+  - to be able to play the game on various different devices.  
   
   ##### Return/frequent Visitor Goals.
-  As a return/frequent visitor I want:<br>
+  As a return/frequent visitor I want:  
   - to be able to gauge/score my performance.
   - to be able to challenge myself by increasing difficulty of the game.
   - to be able to play the game on various different devices.

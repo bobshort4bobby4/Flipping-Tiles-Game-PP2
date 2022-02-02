@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Titan+One&display=swap'); /*google font*/
+
+/*==================General styles========================*/
+
+:root {
+    --headercolour:#E52521;
+    --bodycolour: #049CD8;
+    --ink:black;
+}
+
+
+* {
+    font-family: 'Titan One', cursive;
+    padding:0;
+    border:none;
+    margin:0;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    background-image: url("../media/blue-maze-background.webp"); 
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*========================Header styles=======================*/
+header {
+    width:100%;
+}
+
+header div {
+    background-color:var(--headercolour);
+    min-height:40px;
+    text-align: center;
+    color:var(--ink);
+    width:100%;
+}
+/*=========================Timer styles========================*/
+#scores-region {
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly;
+    color:orange;
+    padding:7px 0 7px 0;
+    font-size:1rem;
+}
