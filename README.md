@@ -13,7 +13,7 @@ Adults also can greatly benefit from 'exercising' the brain, as any activity whi
 can improve mental function.    
   
     
-    # User Experience/User Interface (UX/UI)
+# User Experience/User Interface (UX/UI)
 
 <details>
   
@@ -40,5 +40,13 @@ can improve mental function.
   - to provide a fun game.
   - to provide a game to stimulate mental function.
   - to encourage continued use of the game.
-            
+
+
+  ##### Wireframes
+  CTRL + Click to open in a new tab.
+  
+  [Mobile WireFrames](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/flippin-mobilewt-pp2.pdf)  
+  [Tablet WireFrames](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/flippin-tabletwf-pp2.pdf)  
+  [Desktop WireFrames](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/flippin-desktopwf-pp2.pdf)
+               
 </details>
