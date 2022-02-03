@@ -28,7 +28,11 @@ hideOption.addEventListener("click", slideInstruction);
 let menu_btn = document.getElementById('instructions'); // show Instructions
 menu_btn.addEventListener("click", slideInstruction);
 
-
+/*eventlistenr for modal close ---*/
+let closex = window.document.querySelector(".close");
+let mod = document.querySelector(".modal-wrapper");
+closex.addEventListener("click", hideModal); // eventlistener for modal close on x
+mod.addEventListener("click",hideModal); //event listener for modal close on entire screen
 
 
 /**
@@ -255,4 +259,12 @@ return array;
     document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
     mod = document.querySelector(".modal-wrapper");
     mod.style.display = "block"; // shows modal
+}
+
+/**
+ * a function to hide victory screen
+ */
+ function hideModal() {
+    mod.style.display = "none";
+    startButton.style.animationPlayState = "running"; // starts the start button animation while not playing 
 }
