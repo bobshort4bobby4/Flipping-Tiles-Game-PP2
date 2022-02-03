@@ -210,11 +210,11 @@ return array;
         firstItemClicked = true;
         numberOfMatches++ ; 
         if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
-            //victory(); 
+            victory(); 
            
         }
         if(numberOfMatches === 9 && diffToggle === "hard"){  // checks if victory conditions are met
-            //victory(); 
+            victory(); 
             
         }
       
@@ -233,4 +233,26 @@ return array;
         firstItemClicked = true;
         return;
     }
+}
+
+
+/**
+ * A function to declare victory
+ */
+ function victory() {
+    showModal();
+    setTimeout(()=> {
+    cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards
+    },1000);
+    numberOfMatches = 0;
+    
+}
+
+/**
+ * A function toupdate and display victory screen
+ */
+ function showModal() {
+    document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
+    mod = document.querySelector(".modal-wrapper");
+    mod.style.display = "block"; // shows modal
 }
