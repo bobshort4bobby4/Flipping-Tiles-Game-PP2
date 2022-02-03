@@ -3,7 +3,10 @@
 
 Project is deployed [here](https://bobshort4bobby4.github.io/Flipping-Tiles-Game-PP2/)  
   
-Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)  
+Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)    
+  
+    
+![screen shot of am i responsive](../assets/media/readmeimages/responsive.png)
 
 
 # Introduction
