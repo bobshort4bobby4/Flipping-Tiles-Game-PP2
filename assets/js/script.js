@@ -84,7 +84,7 @@ function startGame() {
     if(diffToggle === "easy") { //set up for easy option
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
-        if(numberOfCardDivs === 18) { //if previous game was hard remove extra cards
+        if(numberOfCardDivs === 18) { //if previous game was hard, remove extra cards
             for(let i = 0; i < 6; i++){
                 let parent = document.getElementById("box-container");
                 let child = parent.lastElementChild;
@@ -94,7 +94,7 @@ function startGame() {
         cards.forEach(card => card.classList.remove("resize-cards")); // make cards bigger because there are less of them
         }
 
-        let panelarray = [0,1,2,3,4,5,6,7,8,9,10,11];
+        let panelarray = [0,1,2,3,4,5,6,7,8,9,10,11]; // 12 cards
         scrambledArray = scramble(panelarray);  // get random positions for cards
         cardIcons = [
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
@@ -113,8 +113,8 @@ function startGame() {
     }  // end of easy setup
 
     if(diffToggle === "hard"){ //set up for hard option
-        panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
-        scrambledArray = scramble(panelarray); // get rando positions for cards
+        panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]; // 18 cards
+        scrambledArray = scramble(panelarray); // get random positions for cards
         cardIcons = [
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
@@ -147,7 +147,7 @@ function startGame() {
             /*===get array of cards-------------*/
         cards = document.querySelectorAll('.card'); 
         cards.forEach(card => card.classList.add("resize-cards")); // change size of cards to reflect greater number 
-        /* put a listener on new cards this could be done with event delegation==================================================remove before sub*/
+        /* put a listener on new cards */
         cards.forEach(card => card.addEventListener('click', turnCard));
     }  // end of  hard setup
 
@@ -170,14 +170,13 @@ function startGame() {
  */
  function turnCard(){
 
-    if(freezeOut){//prevents user clicking on card during 1 second delay before unmatched cards are turned back face down
+    if(freezeOut){ //prevents user clicking on card during 1 second delay before unmatched cards are turned back face down
         return;
     }
     if(firstItemNotClicked) {  // code to deal with first card in pair
 
         if(soundfxToggle) { // play sound effect on certain icons
             let ico1 = this.getElementsByClassName("icon");
-            console.log("in first turn ico1 is" , ico1);
             if(ico1[0].getAttribute("data-type") === "baby") {
                 babyLaugh.play();
             } else if(ico1[0].getAttribute("data-type") === "ambulance") {
@@ -194,8 +193,7 @@ function startGame() {
     }
     // code to deal with second card in pair
     if(soundfxToggle) {  //code for specific icon sounds
-        let ico1 = this.getElementsByClassName("icon");
-        console.log("in second turn ico1 is" , ico1);
+        let ico1 = this.getElementsByClassName("icon"); 
         if(ico1[0].getAttribute("data-type") === "baby") {
         babyLaugh.play();
         } else if(ico1[0].getAttribute("data-type") === "ambulance") {
@@ -206,8 +204,7 @@ function startGame() {
     firstItemNotClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn"); // turn card (second card)
     card2 = this;
-    freezeOut = true;
-    card1.style.pointerEvents = "auto";//resets pointerevents for 1st choice card
+    card1.style.pointerEvents = "auto"; // resets pointerevents for 1st choice card
     compare(card1,card2);//call compare function
 }
  
@@ -227,7 +224,7 @@ function startGame() {
      * using the random list to determine  position
      * @param {*} cardIcons 
      * @param {*} scrambledArray 
-     */
+ */
  function populateBehindCards(cardIcons, scrambledArray) {
     let behinds = window.document.getElementsByClassName("face-side"); 
     
@@ -246,20 +243,18 @@ function startGame() {
     let i = array.length;
 
     while (i--) {
-
         let j = Math.floor(Math.random() * (i+1));
-
         // swap  elements 
         let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
-return array;
+    return array;
 }
 
 /**
  * A function to change difficulty level
- */
+*/
  function toggleDifficulty() {
     if(diffToggle === "easy"){
         diffToggle  = "hard";
@@ -272,12 +267,12 @@ return array;
 
 /**
  * a function to compare the two cards takes in two cards and calls victory functon if all matched
- */
+*/
  function compare(card1, card2){
     freezeOut = true;
     let ico1 = card1.getElementsByClassName("icon");
     let ico2 = card2.getElementsByClassName("icon");
-    if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type")) { // compares the two flipped cards
+    if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type")) { // compares the two flipped cards enters if code block if matched
         if(soundfxToggle){matchsound.play();}
         card1.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card2.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
@@ -287,15 +282,13 @@ return array;
         numberOfMatches++ ; 
         if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
             gameMusic.pause();
-            victory(); 
-           
+            victory();   
         }
         if(numberOfMatches === 9 && diffToggle === "hard"){  // checks if victory conditions are met
             gameMusic.pause();
-            victory(); 
-            
+            victory();    
         }
-        freezeOut = false;
+        freezeOut = false; // allows turn to run again
         return;
         } else {
         // do the un-matched stuff
@@ -306,7 +299,7 @@ return array;
             card2.classList.remove("turn");
             card1 = null; // re-set cards
             card2 = null;
-            freezeOut = false; // stops turncard function from running
+            freezeOut = false; // allows turncard to run again 
 
         return;
           }, 1000);
@@ -318,7 +311,7 @@ return array;
 
 /**
  * A function to declare victory
- */
+*/
  function victory() {
     stopClock();
     showModal();
@@ -332,7 +325,7 @@ return array;
 
 /**
  * A function toupdate and display victory screen
- */
+*/
  function showModal() {
     if(soundfxToggle){victorySound.play();}
     document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
@@ -345,7 +338,7 @@ return array;
 
 /**
  * a function to hide victory screen
- */
+*/
  function hideModal() {
     mod.style.display = "none";
     startButton.style.animationPlayState = "running"; // starts the start button animation while not playing 
@@ -353,7 +346,7 @@ return array;
 
 /**
  * A function to toggle music
- */
+*/
  function toggleMusic() {
     if(musicToggle === true){
         musicToggle  = false;
@@ -370,7 +363,7 @@ return array;
 
 /**
  * A function to toggle the soundfx variable
- */
+*/
  function toggleSoundfx() {
     if(soundfxToggle === true) {
         soundfxToggle = false;
@@ -384,7 +377,7 @@ return array;
 
 /**
  *  A function to update the timer.
- */
+*/
  function timer() {
     currentSeconds++;
 
@@ -402,7 +395,7 @@ return array;
 
 /**
  * A function to stop clock
- */
+*/
  function stopClock() {
     window.clearInterval(clock);
     updateBestScore(currentSeconds, currentMinutes);
@@ -410,6 +403,7 @@ return array;
 
  /**
  * a function to update the best score
+ * takes in the time for latest game in two variables one for seconds, one for minutes and updates the best score if appropriate
  */
 function updateBestScore(currentSeconds,currentMinutes) {
     bestSeconds = document.getElementById("bestTimeSec");
