@@ -77,6 +77,7 @@ function startGame() {
     window.clearInterval(clock); //reset timer 
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
     cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
+    firstItemNotClicked = true; // reset in case user did not complete last game cycle
 
     if(diffToggle === "easy") { //set up for easy option
         cards = document.querySelectorAll('.card');
@@ -107,7 +108,7 @@ function startGame() {
             '<i data-type="knight" class="fas fa-chess-knight icon"></i>',
             '<i data-type="knight" class="fas fa-chess-knight icon"></i>'
         ];
-    }
+    }  // end of easy setup
 
     if(diffToggle === "hard"){ //set up for hard option
         panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
@@ -180,6 +181,7 @@ function startGame() {
         }
 
         this.classList.add("turn"); // turn card (1st card)
+        this.style.pointerEvents = "none"; //stops user clicking on already turned card before second card choice
         card1 = this;
         firstItemNotClicked = false;    
         return;
@@ -198,6 +200,7 @@ function startGame() {
     firstItemNotClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn"); // turn card (second card)
     card2 = this;
+    card1.style.pointerEvents = "auto";//resets pointerevents for 1st choice card
     compare(card1,card2);//call compare function
 }
  
