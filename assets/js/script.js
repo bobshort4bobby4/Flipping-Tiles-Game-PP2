@@ -11,15 +11,15 @@ let numberOfMatches = 0;
 
 // music variables
 let musicToggle = false;
-let gameMusic = new Audio("./assets/media/gametune.mp3");
+let gameMusic = new Audio("./assets/media/sounds/gametune.mp3");
 gameMusic.loop = true;
 
 // sound effects variables
-let babyLaugh = new Audio("./assets/media/baby-laugh.mp3");
-let siren = new Audio("./assets/media/polis-siren.wav");
-let victorySound = new Audio("./assets/media/victory.wav");
-let matchsound = new Audio("./assets/media/shimmer.flac");
-let unmatchedSound = new Audio("./assets/media/lose-sound.wav");
+let babyLaugh = new Audio("./assets/media/sounds/baby-laugh.mp3");
+let siren = new Audio("./assets/media/sounds/polis-siren.wav");
+let victorySound = new Audio("./assets/media/sounds/victory.wav");
+let matchsound = new Audio("./assets/media/sounds/shimmer.flac");
+let unmatchedSound = new Audio("./assets/media/sounds/lose-sound.wav");
 let soundfxToggle = false;
 
 let cards = document.querySelectorAll('.card');
