@@ -14,6 +14,14 @@ let musicToggle = false;
 let gameMusic = new Audio("./assets/media/sounds/gametune.mp3");
 gameMusic.loop = true;
 
+
+// timer variables
+let clock;
+let currentSeconds  = 0;
+let currentMinutes = 0;
+let bestSeconds;
+let bestMinutes;
+
 // sound effects variables
 let babyLaugh = new Audio("./assets/media/sounds/baby-laugh.mp3");
 let siren = new Audio("./assets/media/sounds/polis-siren.wav");
@@ -65,6 +73,7 @@ function startGame() {
         gameMusic.volume = 0.2;
     }
 
+    window.clearInterval(clock); //reset timer 
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
 
     if(diffToggle === "easy") { //set up for easy option
@@ -136,6 +145,12 @@ function startGame() {
         /* put a listener on new cards this could be done with event delegation==================================================remove before sub*/
         cards.forEach(card => card.addEventListener('click', turnCard));
     }
+      //--make cards clickable
+      cards.forEach(card=>card.style.pointerEvents = "auto");
+    currentSeconds = 0;
+    currentMinutes = 0;
+    clock = window.setInterval(timer,1000); // start clock
+
     /*call the function to populate panels face-side passing in the icons and the random placing*/
     populateBehindCards(cardIcons, scrambledArray);
 }   
@@ -289,9 +304,11 @@ return array;
  * A function to declare victory
  */
  function victory() {
+    stopClock();
     showModal();
     setTimeout(()=> {
     cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards
+    
     },1000);
     numberOfMatches = 0;
     
@@ -303,6 +320,9 @@ return array;
  function showModal() {
     if(soundfxToggle){victorySound.play();}
     document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
+    cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
+    document.getElementById("modal-time-minutes").innerText = currentMinutes; // updates the modal with current and best times
+    document.getElementById("modal-time-seconds").innerText = currentSeconds;
     mod = document.querySelector(".modal-wrapper");
     mod.style.display = "block"; // shows modal
 }
@@ -345,3 +365,43 @@ return array;
     }
 }
 
+
+/**
+ *  A function to update the timer.
+ */
+ function timer() {
+    currentSeconds++;
+
+    if( currentSeconds/ 60 === 1){//if seconds over 60 update minute
+        currentMinutes++;
+        currentSeconds = 0;
+    }
+
+    if(currentSeconds < 10){//if seconds less than ten add a preceeding 0
+        currentSeconds = "0" + currentSeconds.toString();
+    }
+    document.getElementById("currTimeSec").innerText = currentSeconds;
+    document.getElementById("currTimeMin").innerText = currentMinutes;
+}
+
+/**
+ * A function to stop clock
+ */
+ function stopClock() {
+    window.clearInterval(clock);
+    updateBestScore(currentSeconds, currentMinutes);
+ }
+
+ /**
+ * a function to update the best score
+ */
+function updateBestScore(currentSeconds,currentMinutes) {
+    bestSeconds = document.getElementById("bestTimeSec");
+    bestMinutes = document.getElementById("bestTimeMin");
+    let bestSec = (Number(bestSeconds.textContent)) + (Number(bestMinutes.textContent) * 60);//convert times to seonds for comparasion
+    let scoreSec = currentSeconds + (currentMinutes * 60);
+    if(bestSec === 0 || scoreSec < bestSec) {//change  Best Score if current one better or if first play-through
+        bestMinutes.textContent = currentMinutes;
+        bestSeconds.textContent = currentSeconds;
+    }     
+}
