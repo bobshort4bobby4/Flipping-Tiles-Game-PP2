@@ -6,7 +6,7 @@ let firstItemNotClicked = true;
 let card1;
 let card2;
 let numberOfMatches = 0;
-
+let freezeOut = false;
 
 
 // music variables
@@ -30,6 +30,7 @@ let matchsound = new Audio("./assets/media/sounds/shimmer.flac");
 let unmatchedSound = new Audio("./assets/media/sounds/lose-sound.wav");
 let soundfxToggle = false;
 
+/*eventlistener for cards*/
 let cards = document.querySelectorAll('.card');
 cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards before start
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
@@ -74,6 +75,7 @@ function startGame() {
         gameMusic.volume = 0.2;
     }
 
+    numberOfMatches = 0;  // reset number of matches
     window.clearInterval(clock); //reset timer 
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
     cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
@@ -167,6 +169,10 @@ function startGame() {
  * @returns 
  */
  function turnCard(){
+
+    if(freezeOut){//prevents user clicking on card during 1 second delay before unmatched cards are turned back face down
+        return;
+    }
     if(firstItemNotClicked) {  // code to deal with first card in pair
 
         if(soundfxToggle) { // play sound effect on certain icons
@@ -200,6 +206,7 @@ function startGame() {
     firstItemNotClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn"); // turn card (second card)
     card2 = this;
+    freezeOut = true;
     card1.style.pointerEvents = "auto";//resets pointerevents for 1st choice card
     compare(card1,card2);//call compare function
 }
@@ -267,6 +274,7 @@ return array;
  * a function to compare the two cards takes in two cards and calls victory functon if all matched
  */
  function compare(card1, card2){
+    freezeOut = true;
     let ico1 = card1.getElementsByClassName("icon");
     let ico2 = card2.getElementsByClassName("icon");
     if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type")) { // compares the two flipped cards
@@ -287,7 +295,7 @@ return array;
             victory(); 
             
         }
-      
+        freezeOut = false;
         return;
         } else {
         // do the un-matched stuff
@@ -298,7 +306,8 @@ return array;
             card2.classList.remove("turn");
             card1 = null; // re-set cards
             card2 = null;
-            
+            freezeOut = false; // stops turncard function from running
+
         return;
           }, 1000);
         firstItemNotClicked = true;
@@ -317,7 +326,7 @@ return array;
     cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards
     
     },1000);
-    numberOfMatches = 0;
+    
     
 }
 
