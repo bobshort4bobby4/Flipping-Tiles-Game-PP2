@@ -76,6 +76,7 @@ function startGame() {
 
     window.clearInterval(clock); //reset timer 
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
+    cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
 
     if(diffToggle === "easy") { //set up for easy option
         cards = document.querySelectorAll('.card');
@@ -145,7 +146,9 @@ function startGame() {
         cards.forEach(card => card.classList.add("resize-cards")); // change size of cards to reflect greater number 
         /* put a listener on new cards this could be done with event delegation==================================================remove before sub*/
         cards.forEach(card => card.addEventListener('click', turnCard));
-    }
+    }  // end of  hard setup
+
+
       //--make cards clickable
       cards.forEach(card=>card.style.pointerEvents = "auto");
     currentSeconds = 0;
