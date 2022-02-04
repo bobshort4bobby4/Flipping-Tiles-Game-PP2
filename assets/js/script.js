@@ -31,6 +31,7 @@ let unmatchedSound = new Audio("./assets/media/sounds/lose-sound.wav");
 let soundfxToggle = false;
 
 let cards = document.querySelectorAll('.card');
+cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards before start
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
 
 /*eventlistener for soundfx option*/
