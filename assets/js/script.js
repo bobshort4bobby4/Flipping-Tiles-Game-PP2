@@ -9,9 +9,19 @@ let numberOfMatches = 0;
 
 
 
+// music variables
+let musicToggle = false;
+let gameMusic = new Audio("./assets/media/gametune.mp3");
+gameMusic.loop = true;
+
 
 let cards = document.querySelectorAll('.card');
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
+
+
+/*eventlistener for music option*/
+let musicOption = window.document.getElementById("music-option");
+musicOption.addEventListener("click", toggleMusic);
 
 /*event listener for start button*/
 let startButton = document.getElementById("start");
@@ -39,6 +49,12 @@ mod.addEventListener("click",hideModal); //event listener for modal close on ent
  * function to start and run game
  */
 function startGame() {
+    if(musicToggle) { //plays music if on
+        gameMusic.load();
+        gameMusic.play();
+        gameMusic.volume = 0.2;
+    }
+
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
 
     if(diffToggle === "easy") { //set up for easy option
@@ -129,6 +145,7 @@ function startGame() {
  */
  function turnCard(){
     if(firstItemClicked) {
+
         this.classList.add("turn"); // turn card
         card1 = this;
         firstItemClicked = false;    
@@ -214,10 +231,12 @@ return array;
         firstItemClicked = true;
         numberOfMatches++ ; 
         if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
+            gameMusic.pause();
             victory(); 
            
         }
         if(numberOfMatches === 9 && diffToggle === "hard"){  // checks if victory conditions are met
+            gameMusic.pause();
             victory(); 
             
         }
@@ -267,4 +286,21 @@ return array;
  function hideModal() {
     mod.style.display = "none";
     startButton.style.animationPlayState = "running"; // starts the start button animation while not playing 
+}
+
+/**
+ * A function to toggle music
+ */
+ function toggleMusic() {
+    if(musicToggle === true){
+        musicToggle  = false;
+        musicOption.innerHTML = '<i class="fas fa-volume-mute"></i>'; // sets the icon on the options page
+       gameMusic.pause();
+    }else{
+        musicToggle = true;
+        gameMusic.load();
+        gameMusic.play();
+        gameMusic.volume = 0.2;
+        musicOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
+    }
 }
