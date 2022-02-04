@@ -14,10 +14,20 @@ let musicToggle = false;
 let gameMusic = new Audio("./assets/media/gametune.mp3");
 gameMusic.loop = true;
 
+// sound effects variables
+let babyLaugh = new Audio("./assets/media/baby-laugh.mp3");
+let siren = new Audio("./assets/media/polis-siren.wav");
+let victorySound = new Audio("./assets/media/victory.wav");
+let matchsound = new Audio("./assets/media/shimmer.flac");
+let unmatchedSound = new Audio("./assets/media/lose-sound.wav");
+let soundfxToggle = false;
 
 let cards = document.querySelectorAll('.card');
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
 
+/*eventlistener for soundfx option*/
+let soundfxOption = window.document.getElementById("soundfx-option");
+soundfxOption.addEventListener("click", toggleSoundfx);
 
 /*eventlistener for music option*/
 let musicOption = window.document.getElementById("music-option");
@@ -132,13 +142,6 @@ function startGame() {
 /*====end of startgame function===*/
 
 
-
-
-
-
-
-
-
 /**
  * a function to turn cards in pairs
  * @returns 
@@ -146,14 +149,35 @@ function startGame() {
  function turnCard(){
     if(firstItemClicked) {
 
-        this.classList.add("turn"); // turn card
+        if(soundfxToggle) { // play sound effect on certain icons
+            let ico1 = this.getElementsByClassName("icon");
+            console.log("in first turn ico1 is" , ico1);
+            if(ico1[0].getAttribute("data-type") === "baby") {
+                babyLaugh.play();
+            } else if(ico1[0].getAttribute("data-type") === "ambulance") {
+                siren.volume = 0.2;//reduce volume on siren sound
+                siren.play();
+            } //end of sound code block
+        }
+
+        this.classList.add("turn"); // turn card (1st card)
         card1 = this;
         firstItemClicked = false;    
         return;
     }
 
+    if(soundfxToggle) {  //code for specific icon sounds
+        let ico1 = this.getElementsByClassName("icon");
+        console.log("in second turn ico1 is" , ico1);
+        if(ico1[0].getAttribute("data-type") === "baby") {
+        babyLaugh.play();
+        } else if(ico1[0].getAttribute("data-type") === "ambulance") {
+            siren.volume = 0.2;//reduce volume on siren sound
+            siren.play();
+        } //end of sound code block
+    }
     firstItemClicked = true;  // resets this  value so next time this function is called preceeding if block is run
-    this.classList.add("turn"); // turn card
+    this.classList.add("turn"); // turn card (second card)
     card2 = this;
     compare(card1,card2);//call compare function
 }
@@ -224,6 +248,7 @@ return array;
     let ico1 = card1.getElementsByClassName("icon");
     let ico2 = card2.getElementsByClassName("icon");
     if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type")) { // compares the two flipped cards
+        if(soundfxToggle){matchsound.play();}
         card1.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card2.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card1 = null;
@@ -245,6 +270,7 @@ return array;
         } else {
         // do the un-matched stuff
             
+            if(soundfxToggle){unmatchedSound.play();}   
             setTimeout(() => { //display unmatched cards for 1 second before re-turning
             card1.classList.remove("turn");
             card2.classList.remove("turn");
@@ -275,6 +301,7 @@ return array;
  * A function toupdate and display victory screen
  */
  function showModal() {
+    if(soundfxToggle){victorySound.play();}
     document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
     mod = document.querySelector(".modal-wrapper");
     mod.style.display = "block"; // shows modal
@@ -304,3 +331,17 @@ return array;
         musicOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
     }
 }
+
+/**
+ * A function to toggle the soundfx variable
+ */
+ function toggleSoundfx() {
+    if(soundfxToggle === true) {
+        soundfxToggle = false;
+        soundfxOption.innerHTML = '<i class="fas fa-volume-mute"></i>'; // sets the icon on the options page
+    } else {
+        soundfxToggle = true;
+        soundfxOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
+    }
+}
+

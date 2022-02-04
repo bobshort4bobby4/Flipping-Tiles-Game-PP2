@@ -40,6 +40,10 @@ header div {
     color:var(--ink);
     width:100%;
 }
+
+.copyright {
+    font-size:.6rem;
+}
 /*=========================Timer styles========================*/
 #scores-region {
     display:flex;
