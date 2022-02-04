@@ -2,7 +2,7 @@
 
 let diffToggle = "easy";
 let scrambledArray;
-let firstItemClicked = true;
+let firstItemNotClicked = true;
 let card1;
 let card2;
 let numberOfMatches = 0;
@@ -166,7 +166,7 @@ function startGame() {
  * @returns 
  */
  function turnCard(){
-    if(firstItemClicked) {
+    if(firstItemNotClicked) {  // code to deal with first card in pair
 
         if(soundfxToggle) { // play sound effect on certain icons
             let ico1 = this.getElementsByClassName("icon");
@@ -181,10 +181,10 @@ function startGame() {
 
         this.classList.add("turn"); // turn card (1st card)
         card1 = this;
-        firstItemClicked = false;    
+        firstItemNotClicked = false;    
         return;
     }
-
+    // code to deal with second card in pair
     if(soundfxToggle) {  //code for specific icon sounds
         let ico1 = this.getElementsByClassName("icon");
         console.log("in second turn ico1 is" , ico1);
@@ -195,7 +195,7 @@ function startGame() {
             siren.play();
         } //end of sound code block
     }
-    firstItemClicked = true;  // resets this  value so next time this function is called preceeding if block is run
+    firstItemNotClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn"); // turn card (second card)
     card2 = this;
     compare(card1,card2);//call compare function
@@ -272,7 +272,7 @@ return array;
         card2.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card1 = null;
         card2 = null;
-        firstItemClicked = true;
+        firstItemNotClicked = true;
         numberOfMatches++ ; 
         if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
             gameMusic.pause();
@@ -298,7 +298,7 @@ return array;
             
         return;
           }, 1000);
-        firstItemClicked = true;
+        firstItemNotClicked = true;
         return;
     }
 }
