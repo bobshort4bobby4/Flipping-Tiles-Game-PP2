@@ -7,6 +7,8 @@ let card1;
 let card2;
 let numberOfMatches = 0;
 let freezeOut = false;
+let cardIcons = [];
+let panelArray = [];
 
 
 // music variables
@@ -94,8 +96,8 @@ function startGame() {
         cards.forEach(card => card.classList.remove("resize-cards")); // make cards bigger because there are less of them
         }
 
-        let panelarray = [0,1,2,3,4,5,6,7,8,9,10,11]; // 12 cards
-        scrambledArray = scramble(panelarray);  // get random positions for cards
+        panelArray = [0,1,2,3,4,5,6,7,8,9,10,11]; // 12 cards
+        scrambledArray = scramble(panelArray);  // get random positions for cards
         cardIcons = [
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
@@ -113,8 +115,8 @@ function startGame() {
     }  // end of easy setup
 
     if(diffToggle === "hard"){ //set up for hard option
-        panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]; // 18 cards
-        scrambledArray = scramble(panelarray); // get random positions for cards
+        panelArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]; // 18 cards
+        scrambledArray = scramble(panelArray); // get random positions for cards
         cardIcons = [
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
             '<i data-type="ambulance" class="fas fa-ambulance icon"></i>',
