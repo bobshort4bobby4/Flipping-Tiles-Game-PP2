@@ -188,11 +188,11 @@ can improve mental function.
   - [Git](https://git-scm.com/) Git was used for version control.
   - [GitHub](https://github.com/) GitHub is used to store the projects code.
   - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
-  - [Chrome Developer Tools](https://https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
   - [Wave](https://wave.webaim.org/) used for accessibility testing.
-  - [favICO.com](https://https://convertico.com/favicon/) used for creating favicon.
+  - [favICO.com](https://convertico.com/favicon/) used for creating favicon.
   - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
-  - [Jshint](https://https://jshint.com/) used to validate Javascript code.
+  - [Jshint](https://jshint.com/) used to validate Javascript code.
   - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.
   - [https://caniuse.com/webp](https://caniuse.com/webp)  used to check compatibility of the webp file format.
