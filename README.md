@@ -470,3 +470,37 @@ can improve mental function.
   (Taken from the Github Docs guide "Cloning a repository")
     
   </details>
+    
+
+
+# Credits
+  <details>
+  <summary>Credits</summary>
+ 
+  #### Images
+  The Background image was downloaded from  [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)  
+  The font used was taken from [Google Fonts](https://fonts.google.com/)  
+  The icons were downloaded from [FontAwesome](https://www.fontawesome.com)  
+    
+  #### Music/Sound FX
+  Music was sourced at [opengameart.org](https://www.opengameart.org)  
+  Remaining sound effects were downloaded from [Freesound.org](https://www.freesound.org)  
+  All sounds are free to use.
+ 
+  #### Code/Reference 
+  The method of placing two identical divs on top of each other using different display properties, I learned from a You-Tube video by [Shaun Pelling](https://www.youtube.com/watch?v=QhKdOrOh90w&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5&index=13&t=401s).  
+  I referenced this video by [freecodecamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1697s) to help me get the flipping animation working properly and some aspects of     program flow.  
+  I used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) to learn about the use of the Audio constructor.  
+  The [w3 schools](https://www.w3schools.com/jsref/default.asp) website was also used particularly in relation to element attributes and how best to set them.  
+  I referenced the Fisher–Yates shuffle algorithm at [Wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).  
+  I learned the method for adding a leading 0 to one digit time values at [TechnicalCafe](https://www.youtube.com/watch?v=1INmsFnD-u4&t=59s).  
+  I used the [Udemy](https://www.udemy.com/course/modern-javascript-from-novice-to-ninja) "Modern Javascript" course for information regarding Modal screens, 
+  event delegation and arrow functions.  
+  The [Code Institute](https://www.CodeInstitute.net) course material.
+  
+  
+  #### Thanks
+  Thank you to my Mentor Mr. Ben Kavanagh and to the Code Institute tutor who pointed me in the right direction regarding which parameters to use when comparing two elements.  
+  
+    
+  </details>
