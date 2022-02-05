@@ -239,7 +239,7 @@ can improve mental function.
   
   
   
-  ![a picture of the autoprefixer css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autoprefixercssvalidation-pp2.png)
+  ![a picture of the autoprefixer css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autofixercssvalidation-pp2.png)
   
   #### W3c HTML Validator
   The HTML was tested with the W3c HTML Validator with no error returned.  
@@ -270,7 +270,7 @@ can improve mental function.
   I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and webaccessibility.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
     
     
-  ![ a picture of the color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/collra11y-pp2.png)  
+  ![ a picture of the color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/colora11y-pp2.png)  
      
     
     
@@ -293,10 +293,10 @@ can improve mental function.
   (min-height:596px and max-height:767px),  
   (min-height:768px and max-height:850px).
   
-  The responsive testing tools included within the Google Chrome browserand the edge browsers was used to test these, all display correctly.  
+  The responsive testing tools included within the Google Chrome  and the Edge browsers were used to test these, all display correctly.  
   
-  I also used the device specific tool within chrome to test a number of devices representng a wide range of device types.  
-  
+  I also used the device specific tool within these browsers to test a number of devices representng a wide range of device types.  
+  The results are given below.
   
   
   |Device          |  Result  Portrait           |         Result Landscape      |
