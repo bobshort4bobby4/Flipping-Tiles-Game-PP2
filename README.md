@@ -52,7 +52,49 @@ can improve mental function.
   - to provide a game to stimulate mental function.
   - to encourage continued use of the game.
 
-
+  
+   ### Design
+  
+  
+  ##### Colour Scheme 
+  I trialled  many different colour palettes whilst building the game and settled on a simple combination of shades of red, blue and black.
+  Black is used for text colour and contrasts well with the other two primary colours.  Default Orange was used for the ink colour for the times as black
+  did not shown up well against the background in the chosen font.  Lightsalmon was used for the display box in the modal screen.
+  
+  Red #E52521  
+  
+  ![Red#e52521](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/red#E52521-pp2.png)  
+  
+  Blue #049CD8  
+  
+  ![Blue#049cd8](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/blue#049CD8-pp2.png)  
+  
+  Black #000000  
+  
+  ![Black#000000](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/black#000000-pp2)  
+  
+  Light Salmon#FFa07A  
+  
+  ![Light Salmon#FFA07A](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lightsalmon-pp2.png)  
+  
+  Orange #FFA500    
+  
+  ![Orange#FFA500](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/orange-pp2.png)  
+  
+  
+  
+  The background image is "blue maze" which was found at [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)  
+  
+  
+  ![Background image]()  
+  
+  ##### Typography
+  I choose 'Titan One' as the font for the site. It is a big bold type that stands out from the background well and is easy to read.
+    
+  
+  
+  ![font example](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/titan1-design-pp2.png)
+    
   ##### Wireframes
   CTRL + Click to open in a new tab.
   
