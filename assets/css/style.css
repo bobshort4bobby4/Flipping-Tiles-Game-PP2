@@ -55,6 +55,12 @@ header div {
     font-size:1rem;
 }
 
+.score {
+    background-color: rgba(0,0,0,0.6);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 
 /*==============styles for main play area=======*/
 #box-container {
