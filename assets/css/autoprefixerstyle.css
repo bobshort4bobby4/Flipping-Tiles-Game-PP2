@@ -494,7 +494,7 @@ header div {
     }
 
     .resize-cards {
-        width:calc(14% - 10px)!important;
+        width:calc(15% - 10px)!important;
     }
 
     #instruction-page {
@@ -669,7 +669,7 @@ header div {
      }
 
     .resize-cards {
-        width:calc(14% - 10px)!important;
+        width:calc(15% - 10px)!important;
        
     }
 }
