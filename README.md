@@ -216,67 +216,67 @@ can improve mental function.
       
   
   
-  ![lighthouse desktop result]()    
+  ![lighthouse desktop result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lighthousedesktop-pp2.png)    
   
   The Lighthouse result for mobile is shown below.  
     
     
-  ![a picture of the lighthouse mobile result]()
+  ![a picture of the lighthouse mobile result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/mobilelighthouse-pp2.png)
     
   
   #### W3c CSS Validator
   The css file was tested using the W3c CSS validator showing no errors and one warning which concerned the importation of the google font. From what I have learned from internet research this does not seem to be considered a matter for concern.
   
   
-  ![css validation result]()
+  ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/cssvalidation-pp2.png)
     
    The autoprefixer parsed css file was tested using the W3c CSS validator, which showed no errors but produced 58 warnings.  The warning were all of the type "is a vendor extension" as shown below.  
     
     
-  ![a picture of the autoprefixer css warnings]()  
+  ![a picture of the autoprefixer css warnings](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autoprefixerresult-pp2.png)  
   
   
   
   
   
-  ![a picture of the autoprefixer css validation result]()
+  ![a picture of the autoprefixer css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autoprefixercssvalidation-pp2.png)
   
   #### W3c HTML Validator
   The HTML was tested with the W3c HTML Validator with no error returned.  
   
   
-  ![ a picture of the html validation result]()  
+  ![ a picture of the html validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/htmlvalidation-pp2.png)  
     
   
   #### JSHint
   The Javascript file was validated using JSHint, with the following result.  The `New JavaScript features (ES6)` option was ticked in the 
   Configure menu. 
   
-  ![a picture of the jshint result]()  
+  ![a picture of the jshint result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/jshintvalidation-pp2.png)  
     
     
   #### WAVE Web Accessibility Evaluation Tool
   The WAVE tool was used to test the page for accessibility.  The inital result produced 8 contrast errors, these were caused by the colour of the ink used for the times  (orange).  
     
-  ![ a picture of the initial wave result]()  
+  ![ a picture of the initial wave result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/waveinitial-pp2.png)  
     
     
   I changed the ink colour to black, this produced no contrast errors but to me at least was extremely hard to see against the blue background.  
   
     
-  ![a picture of the wave result black ink]()  
+  ![a picture of the wave result black ink](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/waveblack-pp2.png)  
     
     
   I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and webaccessibility.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
     
     
-  ![ a picture of the color.a11y result]()  
+  ![ a picture of the color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/collra11y-pp2.png)  
      
     
     
   
     
-  ![ a picture of the accessibility.com result]()  
+  ![ a picture of the accessibility.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/webaccessibility-pp2.png)  
     
     
   #### Responsiveness
@@ -293,7 +293,7 @@ can improve mental function.
   (min-height:596px and max-height:767px),  
   (min-height:768px and max-height:850px).
   
-  The responsive testing tool included within the Google Chrome browser was used to test these, all display correctly.  
+  The responsive testing tools included within the Google Chrome browserand the edge browsers was used to test these, all display correctly.  
   
   I also used the device specific tool within chrome to test a number of devices representng a wide range of device types.  
   
@@ -341,7 +341,7 @@ can improve mental function.
   The tiles were flipping askew due to me having given them both a small padding and margin value.  This issue was easily fixed once I had tracked down what was causing it.   
                                                     
                                                     
-  ![a picture of the askew tile]()                                                
+  ![a picture of the askew tile](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/askewflippedtile-pp2.png)                                                
                                                   
                                                   
   
