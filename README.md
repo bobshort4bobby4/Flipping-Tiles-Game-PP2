@@ -104,6 +104,71 @@ can improve mental function.
                
 </details>  
   
+  
+  
+ # Features
+
+<details>
+  
+  <summary>Features</summary>
+  
+  ### Responsive  Website
+  The site displays properly at a wide range of screen sizes and on landscape mode, further information on this is listed in the testing section.  
+  This satisfies the user need to be able to play the game on various devices.   
+    
+    
+  ![screenshot of iphone](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/iphonelandscape-pp2.png)  
+    
+    
+  ### Instruction Page 
+  On loading there is a button in the bottom right hand of the screen (positioning depends on screen size) which the user can click to display 
+  the game instructions and the game options.  This satisfies the user need to quickly understand how to play
+  the game and to be easily able to toggle options.  
+    
+    
+  ![picture of the instruction page](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/instructionpage-pp2.png)  
+    
+    
+  ### Timer
+  As the game is in progress the time taken is tracked and displayed above the play area.  When the player completes the final pair the time taken 
+  is displayed in the modal screen display area.  If the time is quicker than any other during that playing session the Best Time display
+  is up-dated with the new best time.  This satisfies the user need to be able to gauge/score their performance.  
+    
+    
+  ![a picture of the timer section](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/timer-pp2.png)  
+    
+    
+  ### Customisable Features
+  In order to increase player enjoyment and engagement with the site, I felt it was necessary to add an option to increase difficulty.
+  This is achieved by simply adding another 6 cards to be matched, from 12 to 18. This option is accessed from the slide-down screen as shown above.  
+  It is possible to stop the music and/or sound effects from playing by clicking on the speaker icons, also found on the instruction page.  These features address the user need
+  to be able to vary difficulty and customize gameplay. 
+  
+    
+    
+  ![a picture of the hard difficulty level](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/hardlevel-pp2.png)  
+    
+    
+  ### Modal Screen
+  When the player completes all the matches a modal screen is displayed with a congratulatory message and details of the time taken and the difficulty level.  
+    
+    
+  ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
+  
+  
+  ### Animated Start Button
+  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.
+  
+  
+  ### Possible Future Features
+  I'd would like to add extra features to the game such as;
+  - Progressively harder levels as the player finishes each stage, this will be achieved by adding extra cards and shortening the time the un-matched cards are left turned.
+  - Different colours and icons on the face side of the cards as player progresses through the game.
+  - Set up a high-scores table on localStorage so players could see their ranking.
+  
+  
+  
+  </details>  
     
 # Deployment
   <details>
