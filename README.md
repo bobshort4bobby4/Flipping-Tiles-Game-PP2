@@ -167,8 +167,40 @@ can improve mental function.
   - Set up a high-scores table on localStorage so players could see their ranking.
   
   
+  </details>    
+    
+      
+# Technologies Used
+<details>
+  <summary>Technologies Used</summary>
   
-  </details>  
+  #### Languages Used
+  
+  - HTML5
+  - CSS
+  - Javascript
+  
+  #### Applications Used
+  
+  - [Balsamiq](https://www.balsamiq.com) was used to create wireframes for this project.
+  - [Google Fonts](https://fonts.google.com/) fonts were downloaded from Google Fonts.
+  - [Fontawesome](https://www.fontawesome.com) icons were downloaded from Font Awesome.com.
+  - [Git](https://git-scm.com/) Git was used for version control.
+  - [GitHub](https://github.com/) GitHub is used to store the projects code.
+  - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
+  - [Chrome Developer Tools](https://https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+  - [Wave](https://wave.webaim.org/) used for accessibility testing.
+  - [favICO.com](https://https://convertico.com/favicon/) used for creating favicon.
+  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
+  - [Jshint](https://https://jshint.com/) used to validate Javascript code.
+  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
+  - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.
+  - [https://caniuse.com/webp](https://caniuse.com/webp)  used to check compatibility of the webp file format.
+  - [color.a11y.com](https://color.a11y.com) used for testing colour contrasts.  
+  - [webaccessibility.com](https://webaccessibility.com) used to check for any accessibility issues.  
+  
+ 
+</details>
     
 # Deployment
   <details>
