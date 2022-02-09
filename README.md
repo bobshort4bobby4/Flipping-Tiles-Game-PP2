@@ -276,7 +276,10 @@ can improve mental function.
     
   
     
-  ![ a picture of the audit.deque.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/audit.deque-pp2.png)  
+  ![ a picture of the audit.deque.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/audit.deque-pp2.png)    
+  
+ **Note** the website webaccessability.com was used to test for accessibilty compliance initially, returning a score of 100%, however during my final check of this document I found that that website no longer seem to work so I used the audit.deque website in it's place.  
+  
     
     
   
@@ -384,7 +387,7 @@ can improve mental function.
     timer as the first action in the startGame function.  
   - If a player pressed the start button mid game with only one unmatched card turned, the matching algorithm would not work due to the `firstItemClicked` variable 
     being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
-  - The time shown in the timer area at game finish would often differ from the time shown in the modal screen by one second.  This was fixed by moving the stopclock function       before the call to the showmodal function.  
+  - The time shown in the timer area at game finish would often differ from the time shown in the modal screen by one second.  This was fixed by moving the stopclock function       call to before the call to the showmodal function.  
                                                   
                                                     
                                                     
@@ -417,8 +420,8 @@ can improve mental function.
  
  It may have been preferable to have the music/sound effects toggle icons visible at all times, but the games are short enough that it should not be an issue for anybody.  
   
- When a user clicks on the Easy/Hard button in order to change difficulty, the display is not up-dated with the extra cards untill the start button is clicked and the game 
- begins. This has no adverse effect on game-play but it may have been better from a UX point of view to have the extra cards displayed straight away to confirm the players        actions.  
+ When a user clicks on the Easy/Hard button in order to change difficulty, the display is not up-dated with the extra/lesser amount of cards untill the start button is clicked and the game 
+ begins. This has no adverse effect on game-play but it may have been better from a UX point of view to have the changes displayed straight away to confirm the players        actions.  
   
   
   
