@@ -387,7 +387,7 @@ can improve mental function.
     timer as the first action in the startGame function.  
   - If a player pressed the start button mid game with only one unmatched card turned, the matching algorithm would not work due to the `firstItemClicked` variable 
     being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
-  - The time shown in the timer area at game finish would often differ from the time shown in the modal screen by one second.  This was fixed by moving the stopclock function       call to before the call to the showmodal function.  
+  - The time shown in the timer area at game finish would often differ from the time shown in the modal screen by one second.  This was fixed by moving the stopclock function       call to before the call to the showmodal function in the victory function.  
                                                   
                                                     
                                                     

@@ -79,7 +79,7 @@ function startGame() {
 
     numberOfMatches = 0;  // reset number of matches
     window.clearInterval(clock); //reset timer 
-    startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
+    startButton.style.animationPlayState = "paused"; // stops the start button animation whilst game in play
     cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
     firstItemNotClicked = true; // reset in case user did not complete last game cycle
 
@@ -140,7 +140,7 @@ function startGame() {
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
         if(numberOfCardDivs === 12) { //add extra cards if needed
-            let targetBox= document.getElementById("box-container");
+            let targetBox = document.getElementById("box-container");
             let div1 = document.querySelector(".card"); 
             for(let i = 0; i < 6; i++){
                 targetBox.appendChild(div1.cloneNode(true) );
@@ -155,7 +155,7 @@ function startGame() {
 
 
       //--make cards clickable
-      cards.forEach(card=>card.style.pointerEvents = "auto");
+    cards.forEach(card=>card.style.pointerEvents = "auto");
     currentSeconds = 0;
     currentMinutes = 0;
     clock = window.setInterval(timer,1000); // start clock
@@ -216,7 +216,7 @@ function startGame() {
  */
   function slideInstruction(){
     let page = window.document.getElementById("instruction-page");
-     page.classList.toggle("show-instructions");
+    page.classList.toggle("show-instructions");
     
 }
 
@@ -255,7 +255,7 @@ function startGame() {
 }
 
 /**
- * A function to change difficulty level
+ * A function to change difficulty level text on instruction page
 */
  function toggleDifficulty() {
     if(diffToggle === "easy"){
@@ -268,7 +268,7 @@ function startGame() {
 }
 
 /**
- * a function to compare the two cards takes in two cards and calls victory functon if all matched
+ * a function to compare the two cards, takes in two cards and calls victory functon if all matched
 */
  function compare(card1, card2){
     freezeOut = true;
@@ -383,12 +383,12 @@ function startGame() {
  function timer() {
     currentSeconds++;
 
-    if( currentSeconds/ 60 === 1){//if seconds over 60 update minute
+    if( currentSeconds/ 60 === 1){ // if seconds over 60 update minute
         currentMinutes++;
         currentSeconds = 0;
     }
 
-    if(currentSeconds < 10){//if seconds less than ten add a preceeding 0
+    if(currentSeconds < 10){ // if seconds less than ten add a preceeding 0
         currentSeconds = "0" + currentSeconds.toString();
     }
     document.getElementById("currTimeSec").innerText = currentSeconds;
@@ -412,7 +412,7 @@ function updateBestScore(currentSeconds,currentMinutes) {
     bestMinutes = document.getElementById("bestTimeMin");
     let bestSec = (Number(bestSeconds.textContent)) + (Number(bestMinutes.textContent) * 60);//convert times to seonds for comparasion
     let scoreSec = currentSeconds + (currentMinutes * 60);
-    if(bestSec === 0 || scoreSec < bestSec) {//change  Best Score if current one better or if first play-through
+    if(bestSec === 0 || scoreSec < bestSec) { // change  Best Score if current one better or if first play-through
         bestMinutes.textContent = currentMinutes;
         bestSeconds.textContent = currentSeconds;
     }     
