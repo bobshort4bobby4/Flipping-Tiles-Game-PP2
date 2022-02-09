@@ -153,12 +153,15 @@ can improve mental function.
   When the player completes all the matches a modal screen is displayed with a congratulatory message and details of the time taken and the difficulty level.  
     
     
-  ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
+  ![a picture of the victory screen](https://github.(com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
   
   
   ### Animated Start Button
-  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.
-  
+  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.  
+    
+  ![a picture of the start button](https://github.(com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/startbutton-pp2.png)
+    
+    
   
   ### Possible Future Features
   I'd would like to add extra features to the game such as;
