@@ -19,7 +19,7 @@ are flipped back to blank-side up.  The game is won when all the pairs are found
 
 
 Memory games have been shown to greatly help children develop key skills. Brain functions such as focus, attention and concentration
-are improved by games such as this one. Visual recognition is also improved as is both short-term and long-term memory.  
+are improved by games such as this one. Visual recognition is also improved as are both short-term and long-term memory.  
 Adults also can greatly benefit from 'exercising' the brain, as any activity which encourages mental activity maintains and
 can improve mental function.    
   
@@ -131,7 +131,7 @@ can improve mental function.
     
   ### Timer
   As the game is in progress the time taken is tracked and displayed above the play area.  When the player completes the final pair the time taken 
-  is displayed in the modal screen display area.  If the time is quicker than any other during that playing session the Best Time display
+  is displayed in the modal screen display area.  If the time is quicker than any other during that playing session or it is the first game in that session the Best Time display
   is up-dated with the new best time.  This satisfies the user need to be able to gauge/score their performance.  
     
     
@@ -197,7 +197,7 @@ can improve mental function.
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.
   - [https://caniuse.com/webp](https://caniuse.com/webp)  used to check compatibility of the webp file format.
   - [color.a11y.com](https://color.a11y.com) used for testing colour contrasts.  
-  - [webaccessibility.com](https://webaccessibility.com) used to check for any accessibility issues.  
+  - [audit.deque.com](https://audit.deque.com) used to check for any accessibility issues.  
   
  
 </details>  
@@ -225,7 +225,7 @@ can improve mental function.
     
   
   #### W3c CSS Validator
-  The css file was tested using the W3c CSS validator showing no errors and one warning which concerned the importation of the google font. From what I have learned from internet research this does not seem to be considered a matter for concern.
+  The css file was tested using the W3c CSS validator showing no errors and one warning which concerned the importation of the google font. From what I have learned about this warning from internet research it does not seem to be considered a matter for concern.
   
   
   ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/cssvalidation-pp2.png)
@@ -267,7 +267,7 @@ can improve mental function.
   ![a picture of the wave result black ink](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/waveblack-pp2.png)  
     
     
-  I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and webaccessibility.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
+  I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and audit.deque.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
     
     
   ![ a picture of the color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/colora11y-pp2.png)  
@@ -276,7 +276,10 @@ can improve mental function.
     
   
     
-  ![ a picture of the accessibility.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/webaccessibility-pp2.png)  
+  ![ a picture of the audit.deque.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/audit.deque-pp2.png)  
+    
+    
+  
     
     
   #### Responsiveness
