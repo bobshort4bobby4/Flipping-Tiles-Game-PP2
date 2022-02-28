@@ -123,6 +123,7 @@ header div {
 
 .face-side {
     background-color: var(--headercolour);
+    backface-visibility: hidden;
     width:100%;
     -webkit-transform:rotateY(180deg);
             transform:rotateY(180deg);  
